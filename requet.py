@@ -6,9 +6,12 @@ def requet_standard() :
 
 
 
-# def requet_défini()
+def requet_défini() : 
+    nombres_paquets = input(" veiller entrer le nombre de paquet que vous vouler capturer: ")
+    ft.capture_standard()
 
 
-# def requet_indéfini()
+def requet_indéfini() : 
+    ft.capture_indéfini()
 
 requet_standard()
