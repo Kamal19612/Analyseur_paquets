@@ -1,5 +1,5 @@
 # lister le nom des interfaces
-import pretty_errors
+
 import psutil
 
 def scanner() :
@@ -11,7 +11,6 @@ def scanner() :
     # afficher le nom des interfaces 
     print("les interfaces disponibles sont: ", interface_names )
     return interface_names 
-
 # fonction permetant de recuperrer le port de l'utisisateur
 def choix_port(list_interfaces) :
     interface_choisi=input("veiller faire votre choix de l'interface que vous voudriez utiliser : ")
@@ -23,6 +22,6 @@ def choix_port(list_interfaces) :
         return choix_port(list_interfaces)
 
 
+# list_interfaces = scanner()
+# choix_port(list_interfaces)
 
-list_interfaces = scanner()
-choix_port(list_interfaces)
