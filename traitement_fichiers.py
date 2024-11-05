@@ -20,10 +20,10 @@ def requet_defini(port):
         statistic(df)
     except ValueError:
         print("Veuillez entrer un nombre valide.")
-        requet_defini()
+        requet_defini(port)
 
 # def requet_indefini():
-    global capturing, packet_data
+    """ global capturing, packet_data
     capturing = True
     packet_data = []
     
@@ -48,12 +48,12 @@ def requet_defini(port):
     print(f"Capture terminée. {len(packet_data)} paquets capturés.")
     df = pd.DataFrame(packet_data)
     print("Colonnes du DataFrame :", df.columns)  # Ajoutez cette ligne pour déboguer
-    statistic(df)
+    statistic(df)"""
 
 def choix_requet(port): 
     print("Deux options s'offrent à vous")
     print("1. Lancer une requête standard (20 paquets par défaut)")
-    print("2. Lancer une requête manuelle")
+    print("2. Lancer une requête defini")
     # print("3. Lancer une requête indéfinie (capture continue jusqu'à arrêt)")
     
     try:
@@ -61,9 +61,7 @@ def choix_requet(port):
         if option == 1:
             requet_standard(port) 
         elif option == 2:
-            requet_defini()
-        # elif option == 3:
-        #     requet_indefini()
+            requet_defini(port)
         else:
             print("Erreur : option non reconnue. Veuillez réessayer.")
             choix_requet()
