@@ -173,11 +173,6 @@ def statistic(df):
         plt.show(block=False)  # Affiche le graphique dans une nouvelle fenêtre
     
         # Graphique 3 : Répartition des types de requête
-        # plt.figure(figsize=(8, 6))
-        # sns.countplot(x='Request Type', data=df)
-        # plt.title('Répartition des types de requête')
-        # plt.show(block=False)  # Affiche le graphique dans une nouvelle fenêtre
-        # Comptage des occurrences par type de requête
         request_counts = df['Request Type'].value_counts()
         labels = request_counts.index
         sizes = request_counts.values
